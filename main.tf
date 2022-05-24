@@ -8,3 +8,9 @@ resource "null_resource" "helloWorld1" {
     command = "echo Hello ${random_pet.name.id}"
   }
 }
+
+resource "null_resource" "helloWorld2" {
+  provisioner "local-exec" {
+    command = "echo Hello ${random_pet.name1.id}"
+  }
+}
