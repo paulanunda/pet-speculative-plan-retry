@@ -1,5 +1,7 @@
+variable "length" {}
+
 resource "random_pet" "name" {
- length    = "4"
+ length    = var.length
  separator = "-"
 }
 
